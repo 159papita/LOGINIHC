@@ -1,0 +1,399 @@
+/*menu*/
+.topheader {
+  position: fixed;
+  background-color: rgb(24, 198, 241);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.Menu-Horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Menu-Horizontal li a {
+  display: block;
+  text-decoration: none;
+}
+
+.Menu-Horizontal li a:hover {
+  color: red;
+}
+
+.Menu-Vertical {
+  padding: 0;
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 6.25rem;
+  background-color: rgb(24, 198, 241);
+}
+
+.Menu-Horizontal li:hover .Menu-Vertical {
+  display: block;
+}
+
+.Menu-Vertical li a {
+  padding: 0.938rem 0.938rem 0.938rem 1.25rem;
+}
+
+/*SECCION PRODUCTOS */
+.seccion-productos {
+  padding: 6.25rem 2.5rem;
+  background-color: #94f7f7;
+}
+
+.div-gral-prod {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.div-prod-texto {
+  flex: 1;
+}
+
+.div-prod-texto h2 {
+  color: black;
+  margin-bottom: 0.938rem;
+}
+
+.div-prod-texto p {
+  color: black;
+  line-height: 1.5;
+}
+
+.div-prod-img {
+  flex: 1;
+}
+
+.div-prod-img img {
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
+}
+
+/* --- SECCIÓN SALUD --- */
+.seccion-salud {
+  background-color: #d8f9ff;
+  padding: 3.75rem 1.25rem;
+}
+
+.div-gral-salud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+/* Texto */
+.div-salud-texto {
+  flex: 1;
+  min-width: 17.5rem;
+}
+
+.div-salud-texto h2 {
+  color: #005b5b;
+  margin-bottom: 0.938rem;
+  font-size: 1.8rem;
+}
+
+.div-salud-texto p {
+  color: #003d3d;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Video */
+.div-salud-vid {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 31.25rem;
+  aspect-ratio: 16/9;
+}
+
+.div-salud-vid iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.625rem;
+}
+
+/* Responsividad */
+@media (max-width: 48rem) {
+  .div-gral-salud {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .div-salud-texto {
+    order: 2;
+  }
+
+  .div-salud-vid {
+    order: 1;
+    max-width: 100%;
+  }
+}
+
+/*FORMULARIO*/
+.seccion-formulario {
+  background-color: rgb(44, 162, 209);
+  padding: 2.5rem;
+  border: 0.188rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.div-cont-formulario {
+  background-color: rgb(68, 194, 216);
+  padding: 1.875rem;
+  border: 0.125rem solid #85d3f7;
+  border-radius: 0.625rem;
+  width: 100%;
+  max-width: 31.25rem;
+}
+
+.campo {
+  border: 0.063rem;
+  padding: 0.938rem;
+  margin-bottom: 0.938rem;
+  border-radius: 0.5rem;
+  background-color: rgb(128, 205, 228);
+}
+
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
+}
+
+/*INPUTS Y SELECT*/
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.063rem solid blueviolet;
+  border-radius: 0.313rem;
+}
+
+.lista-checkbox,
+.lista-radio {
+  list-style: none;
+  padding: 0.625rem;
+  margin: 0;
+  border: 0.063rem;
+  background-color: rgb(162, 213, 229);
+  border-radius: 0.063rem;
+}
+
+button {
+  background-color: rgb(10, 178, 190);
+  color: black;
+  border: 0.0625rem solid black;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.313rem;
+  cursor: pointer;
+}
+/* Footer general */
+.footer {
+  background-color: #222; /* Fondo oscuro para contraste */
+  color: white;
+  padding: 2rem 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Contenedor flexible para 3 columnas */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem;
+  margin: auto;
+  gap: 2rem;
+}
+
+/* Marca o logotipo */
+.footer-brand {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-logo {
+  width: 3.75rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+/* Enlaces legales */
+.footer-links {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Redes sociales con íconos */
+.footer-social {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 48rem) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social img {
+    margin-bottom: 0.5rem;
+  }
+}
+/* Contenedor principal: Centra el formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  /* Fondo atractivo para la vista de escritorio */
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  padding: 1.25rem; /* 20px de padding */
+}
+
+/* La caja del formulario */
+.login-box {
+  background: white;
+  padding: 2.5rem; /* 40px */
+  border-radius: 0.625rem; /* 10px */
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2); /* Sombra */
+  width: 100%;
+  max-width: 25rem; /* 400px, el ancho máximo */
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5625rem; /* 25px */
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* División para agrupar Label e Input */
+.input-group {
+  margin-bottom: 1.25rem; /* 20px */
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem; /* 8px */
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem; /* 12px */
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem; /* 5px */
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* Estilo del botón */
+.login-button {
+  width: 100%;
+  padding: 0.75rem; /* 12px */
+  border: none;
+  border-radius: 0.3125rem; /* 5px */
+  background-color: #2575fc;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.625rem; /* 10px */
+}
+
+.login-button:hover {
+  background-color: #0e63e2;
+}
+
+/* -------------------------------------- */
+/* MEDIA QUERY: RESPONSIVE MÓVILES */
+/* -------------------------------------- */
+
+/* Estilos aplicados cuando la pantalla mide 600px o menos */
+@media (max-width: 600px) {
+  /* El contenedor principal simula una vista de aplicación */
+  .login-container {
+    padding: 0; /* Quita el padding exterior */
+    background: #fff; /* Fondo blanco liso */
+    align-items: flex-start; /* Mueve el formulario arriba */
+    min-height: auto;
+  }
+
+  /* La caja del formulario se expande y pierde los adornos de tarjeta */
+  .login-box {
+    padding: 1.5rem; /* 24px de padding interno */
+    margin-top: 2rem; /* 32px de espacio superior */
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none; /* Elimina la sombra */
+    border-radius: 0; /* Elimina el borde redondeado */
+    border: none;
+  }
+
+  .login-box h2 {
+    font-size: 1.7rem; /* Ajuste sutil del tamaño */
+    text-align: left;
+  }
+
+  .input-group input {
+    padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
+  }
+}
